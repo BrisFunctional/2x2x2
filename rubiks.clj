@@ -59,6 +59,11 @@
 
 (do
   (println "===================")
-  (let [moves [:F :U :D :R :L]]
-    (print-cube (apply-moves (apply-moves initial moves) (generate-undo-seq moves))))
-  )
+  (print-cube initial)
+  (let [moves [:F :U :D :R :L]
+        moved-cube (apply-moves initial moves)
+        undo-moves (generate-undo-seq moves)
+        solved-cube (apply-moves moved-cube undo-moves)]
+    (print-cube initial)
+    (print-cube moved-cube)
+    (print-cube solved-cube)))
