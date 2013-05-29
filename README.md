@@ -1,4 +1,4 @@
-junk
-====
+2x2x2
+=====
 
-Another look at the mechanics of a shared working environment for BrisFunctional workshops
+Solving small Rubik's cubes
